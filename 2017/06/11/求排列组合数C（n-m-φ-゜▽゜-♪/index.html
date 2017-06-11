@@ -161,12 +161,13 @@
   </header>
 
   <section class="post">
-    <p>我们可以先预处理出1~n的阶乘以及阶乘的逆元；</p>
-<pre><code>对于阶乘的逆元，我们可以直接由费马小定理，用快速幂求出；
+    <pre><code>我们可以先预处理出1~n的阶乘以及阶乘的逆元；
 
-    然后套公式；
+    对于阶乘的逆元，我们可以直接由费马小定理，用快速幂求出；
 
-       （吐槽快速幂…………一定要开long long，不然会爆零😒😒）
+           然后套公式；
+
+               （吐槽快速幂…………一定要开long long，不然会爆零😒😒）
 </code></pre><hr>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Factorial</span><span class="params">()</span><span class="comment">//阶乘</span></span><br><span class="line"></span>&#123;</span><br><span class="line">    f[<span class="number">0</span>] = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>;i &lt;= n;i++)</span><br><span class="line">       f[i] = (i%p*f[i<span class="number">-1</span>]%p)%p;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Inverse_element</span><span class="params">()</span><span class="comment">//阶乘的逆元</span></span><br><span class="line"></span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>;i &lt;= n;i++)</span><br><span class="line">       inv[i] = fast_pow(f[i],p<span class="number">-2</span>);<span class="comment">//费马小定理求逆元</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="function">LL <span class="title">C</span><span class="params">(<span class="keyword">int</span> n,<span class="keyword">int</span> m)</span></span>&#123; <span class="keyword">return</span> f[n] * inv[m] % p * inv[n - m] % p; &#125;<span class="comment">//公式</span></span><br></pre></td></tr></table></figure>
 <p>当然，数据比较弱的话，我们可以偷个懒，用个效率稍低的算法…………</p>
