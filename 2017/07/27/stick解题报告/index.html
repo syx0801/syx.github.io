@@ -4,7 +4,7 @@
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     
-    <title>stick结题报告 | Des丨tiny丶柠凉</title>
+    <title>stick解题报告 | Des丨tiny丶柠凉</title>
     <meta name="renderer" content="webkit">
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
@@ -15,11 +15,11 @@
     <meta name="description" content="爆零万岁~\(≧▽≦)/~">
 
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="stick结题报告 | Des丨tiny丶柠凉">
+    <meta name="twitter:title" content="stick解题报告 | Des丨tiny丶柠凉">
     <meta name="twitter:description" content="爆零万岁~\(≧▽≦)/~">
 
     <meta property="og:type" content="article">
-    <meta property="og:title" content="stick结题报告 | Des丨tiny丶柠凉">
+    <meta property="og:title" content="stick解题报告 | Des丨tiny丶柠凉">
     <meta property="og:description" content="爆零万岁~\(≧▽≦)/~">
 
     
@@ -157,11 +157,28 @@
       </span> 
    
     </div>
-    <h1 class="post-title">stick结题报告</h1>
+    <h1 class="post-title">stick解题报告</h1>
   </header>
 
   <section class="post">
-    
+    <h3 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h3><blockquote>
+<p>LYK有很多木棍，具体的，总共有n根，且每根木棍都有一个长度。为了方便起见，我们可以用一个正整数ai表示第i根木棍的长度。<br>LYK有一把小刀，但这把小刀由于削木棍很不方便，对于一根木棍而言，它只能用这把小刀削掉恰好1的长度。<br>LYK觉得如果4根木棍头尾相连能恰好拼成长方形，说明这4根木棍是可以捆在一起卖钱的！具体的，如果这4根木棍的长度分别为a,b,c,d，如果满足a=b,c=d，说明恰好可以拼成长方形，且获得的钱为这4根木棍圈成的面积a*c。当然如果不能恰好拼成长方形，则卖不出去。<br>LYK想将这些木棍尽可能的4个一组捆在一起去卖钱，它想知道最多能获得多少钱。</p>
+</blockquote>
+<hr>
+<blockquote>
+<h4 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式"></a>输入格式</h4><p>第一行一个数n，表示木棍的个数。<br>接下来一行n个数，第i个数ai表示第i根木棍的长度。</p>
+<hr>
+<h4 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式"></a>输出格式</h4><p>一个数表示答案。</p>
+<hr>
+<h4 id="数据范围"><a href="#数据范围" class="headerlink" title="数据范围"></a>数据范围</h4><p>对于30%的数据n=4。<br>对于50%的数据n&lt;=20。<br>对于70%的数据n&lt;=1000。<br>对于100%的数据1&lt;=n&lt;=100000，1&lt;=ai&lt;=1000000。</p>
+</blockquote>
+<h3 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h3><blockquote>
+<p>长方形的两边等长，所以如果某个长度的木棍是长方形的两条边的话，这个长度的木棍必须有偶数根，如果当前长度的木棍有奇数根，就削去1的长度，<br>因为求面积，且数据范围ai&lt;=1000000，所以会爆int…</p>
+</blockquote>
+<hr>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdlib&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;queue&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;deque&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">read</span><span class="params">(<span class="keyword">int</span> &amp;x)</span></span>&#123;</span><br><span class="line">    <span class="keyword">char</span> c = getchar(); x = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span>(c &lt; <span class="string">'0'</span> || c &gt; <span class="string">'9'</span>) c = getchar();</span><br><span class="line">    <span class="keyword">while</span>(c &lt;= <span class="string">'9'</span> &amp;&amp; c &gt;= <span class="string">'0'</span>) x = x*<span class="number">10</span>+c<span class="number">-48</span>, c = getchar();</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">int</span> cnt[<span class="number">1000020</span>];</span><br><span class="line"><span class="keyword">long</span> <span class="keyword">long</span> area;</span><br><span class="line"><span class="keyword">int</span> maxn,n,x;</span><br><span class="line"><span class="keyword">bool</span> flag;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	freopen(<span class="string">"stick.in"</span>,<span class="string">"r"</span>,<span class="built_in">stdin</span>);</span><br><span class="line">	freopen(<span class="string">"stick.out"</span>,<span class="string">"w"</span>,<span class="built_in">stdout</span>);</span><br><span class="line">	read(n);</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>;i &lt;= n;i++)&#123;</span><br><span class="line">		read(x);</span><br><span class="line">		cnt[x]++;</span><br><span class="line">		maxn = max(maxn,x);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i = maxn;i &gt;= <span class="number">1</span>;i--)&#123;</span><br><span class="line">		<span class="keyword">if</span>((cnt[i]%<span class="number">2</span>==<span class="number">1</span> &amp;&amp; cnt[i]!=<span class="number">1</span>) || (cnt[i]==<span class="number">1</span> &amp;&amp; flag==<span class="number">0</span>))</span><br><span class="line">			flag=<span class="number">1</span>,cnt[i<span class="number">-1</span>]++;</span><br><span class="line">		<span class="keyword">else</span> flag = <span class="number">0</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">int</span> last = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i = maxn;i &gt;= <span class="number">1</span>;i--)&#123;</span><br><span class="line">		<span class="keyword">while</span>(cnt[i] &gt;= <span class="number">2</span>)&#123;</span><br><span class="line">			cnt[i] -= <span class="number">2</span>;</span><br><span class="line">			<span class="keyword">if</span>(last != <span class="number">0</span>)</span><br><span class="line">				area += <span class="number">1l</span>l*last*i,last = <span class="number">0</span>;</span><br><span class="line">			<span class="keyword">else</span> last = i;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%lld"</span>,area);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="http://i4.piimg.com/597109/a4dd82ba264c3a0b.jpg" alt="orz"></p>
+
   </section>
 
 </article>
@@ -174,7 +191,7 @@
                
             <div class="read-more-item">
                 <span class="read-more-item-dim">更早的文章</span>
-                <h2 class="post-list__post-title post-title"><a href="/2017/07/27/select解题报告/" title="select结题报告">select结题报告</a></h2>
+                <h2 class="post-list__post-title post-title"><a href="/2017/07/27/select解题报告/" title="select解题报告">select解题报告</a></h2>
                 <p class="excerpt">
                 
                 题目描述
