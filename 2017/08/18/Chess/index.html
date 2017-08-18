@@ -151,7 +151,9 @@
 
   <header class="post-header">
     <div class="post-meta">
-      <time datetime="2017-08-18T03:01:47.000Z" class="post-list__meta--date date">2017-08-18</time> &#8226; <span class="post-meta__tags tags">于&nbsp; </span>
+      <time datetime="2017-08-18T03:01:47.000Z" class="post-list__meta--date date">2017-08-18</time> &#8226; <span class="post-meta__tags tags">于&nbsp;
+  <a class="tag-link" href="/tags/组合数/">组合数</a>
+ </span>
       <span class="page-pv">
       &nbsp;阅读&nbsp;<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>
       </span> 
@@ -161,7 +163,26 @@
   </header>
 
   <section class="post">
-    
+    <h2 id="传送门"><a href="#传送门" class="headerlink" title="传送门"></a><a href="http://acm.hdu.edu.cn/showproblem.php?pid=6114" target="_blank" rel="external">传送门</a></h2><h3 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h3><blockquote>
+<p>車是中国象棋中的一种棋子，它能攻击同一行或同一列中没有其他棋子阻隔的棋子。一天，小度在棋盘上摆起了许多車……他想知道，在一共N×M个点的矩形棋盘中摆最多个数的車使其互不攻击的方案数。他经过思考，得出了答案。但他仍不满足，想增加一个条件：对于任何一个車A，如果有其他一个車B在它的上方（車B行号小于車A），那么車A必须在車B的右边（車A列号大于車B）。</p>
+<p>现在要问问你，满足要求的方案数是多少。</p>
+</blockquote>
+<hr>
+<h3 id="Input"><a href="#Input" class="headerlink" title="Input"></a>Input</h3><blockquote>
+<p>第一行一个正整数T，表示数据组数。</p>
+<p>对于每组数据：一行，两个正整数N和M（N&lt;=1000，M&lt;=1000）。</p>
+</blockquote>
+<hr>
+<h3 id="Output"><a href="#Output" class="headerlink" title="Output"></a>Output</h3><blockquote>
+<p>对于每组数据输出一行，代表方案数模1000000007（1e9+7）。</p>
+</blockquote>
+<hr>
+<h3 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h3><blockquote>
+<p>手推了下发现就是对应在一串n个方格上取m个车放(n&gt;m)，然后看下横着放和竖着放都一样的。所以就是C(n,m)</p>
+</blockquote>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">#include&lt;cmath&gt;</span><br><span class="line">#include&lt;cstring&gt;</span><br><span class="line">#include&lt;cstdio&gt;</span><br><span class="line">#include&lt;cstdlib&gt;</span><br><span class="line">#include&lt;algorithm&gt;</span><br><span class="line">#include&lt;deque&gt;</span><br><span class="line">#include&lt;queue&gt;</span><br><span class="line">#include&lt;stack&gt;</span><br><span class="line">#include&lt;vector&gt;</span><br><span class="line">#define LL long long</span><br><span class="line">#define MAX -999999999</span><br><span class="line">#define MIN 999999999</span><br><span class="line">using namespace std;</span><br><span class="line">int a[1005],p = 1e9+7;</span><br><span class="line">LL f[1000005],inv[1000005];</span><br><span class="line">LL fast_pow(LL x,int n)&#123;</span><br><span class="line">    LL ans = 1;</span><br><span class="line">    while (n &gt; 0) &#123;</span><br><span class="line">        if (n &amp; 1)</span><br><span class="line">          ans = (LL)(ans * x)%p;</span><br><span class="line">        x = (LL)(x * x)%p;</span><br><span class="line">        n &gt;&gt;= 1;</span><br><span class="line">    &#125;</span><br><span class="line">    return ans % p;</span><br><span class="line">&#125;</span><br><span class="line">LL CC(int n,int m)&#123;</span><br><span class="line">    if(m &lt; 0 || m &gt; n)</span><br><span class="line">      return 0;</span><br><span class="line">    LL re = 1;</span><br><span class="line">    for(int i = 0;i &lt; m;i++)&#123;</span><br><span class="line">        re = re * (n - i)%p * fast_pow(i+1,p-2)%p;</span><br><span class="line">    &#125;</span><br><span class="line">    return re%p;</span><br><span class="line">&#125;</span><br><span class="line">int main()&#123;</span><br><span class="line">    int n,m,T;</span><br><span class="line">    scanf("%d",&amp;T);</span><br><span class="line">    while(T--)&#123;</span><br><span class="line">        scanf("%d%d",&amp;n,&amp;m);</span><br><span class="line">        if(n &lt; m) n^=m,m^=n,n^=m; </span><br><span class="line">           printf("%d\n",CC(n,m));</span><br><span class="line">    &#125; </span><br><span class="line">     </span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="http://i1.bvimg.com/597109/f2f743cc13b77584.png" alt="Markdown"></p>
+
   </section>
 
 </article>
@@ -178,10 +199,10 @@
                 <p class="excerpt">
                 
                 
-title: ‘ [UOJ Easy Round #2]手机的生产’date: 2017-08-18 09:37:47tags:— DP
-传送门题目链接
+title: [UOJ Easy Round #2]手机的生产’date: 2017-08-18 09:37:47
+tags: DP传送门题目链接
 由于电信技术的发展，人人都可以通过手机互相联系。
-有一位电信大佬最近想生产一大批手机，然而从生产线上一台一台地生产实在太慢了，于是他想出了一个办
+有一位电信大佬最近想生产一大批手机，然而从生产线上一台一台地生产实在太慢了，于是他想出了一个办法 —
                 &hellip;
                 </p>
                 <div class="post-list__meta"><time datetime="2017-08-18T01:37:47.130Z" class="post-list__meta--date date">2017-08-18</time> &#8226; <span class="post-list__meta--tags tags">于&nbsp;</span><a class="btn-border-small" href="/2017/08/18/UOJ-Easy-Round-2-手机的生产/">继续阅读</a></div>
