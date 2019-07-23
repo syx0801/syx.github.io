@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    
+    <title>codeforces #574 Div2 D2 | 可能是轩轩叭</title>
+    <meta name="renderer" content="webkit">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <meta name="description" content="爆零万岁~\(≧▽≦)/~">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="codeforces #574 Div2 D2 | 可能是轩轩叭">
+    <meta name="twitter:description" content="爆零万岁~\(≧▽≦)/~">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="codeforces #574 Div2 D2 | 可能是轩轩叭">
+    <meta property="og:description" content="爆零万岁~\(≧▽≦)/~">
+
+    
+    <meta name="author" content="可能是轩轩叭">
+    
+    <link rel="stylesheet" href="/css/vno.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
+
+    
+    <link rel="icon" href="/images/avatar-small.png">
+    
+
+    <meta name="generator" content="hexo"/>
+    
+    <link rel="alternate" type="application/rss+xml" title="可能是轩轩叭" href="/atom.xml">
+    
+
+    <link rel="canonical" href="syx0801.github.io/2019/07/23/codeforces-574-Div2-D2/"/>
+
+                 
+</head>
+
+<body class="home-template no-js">
+    <script src="//cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
+    <script src="/js/main.js"></script>
+    <span class="mobile btn-mobile-menu">
+        <i class="fa fa-list btn-mobile-menu__icon"></i>
+        <i class="fa fa-angle-up btn-mobile-close__icon hidden"></i>
+    </span>
+
+    
+<header class="panel-cover panel-cover--collapsed" style="background-image: url(/images/background-cover.jpg)">
+  <div class="panel-main">
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        <a href="/" title="前往 可能是轩轩叭 的主页"><img src="/images/avatar.jpg" width="80" alt="可能是轩轩叭 logo" class="panel-cover__logo logo" /></a>
+        <h1 class="panel-cover__title panel-title"><a href="/" title="link to homepage for 可能是轩轩叭">可能是轩轩叭</a></h1>
+        
+        <span class="panel-cover__subtitle panel-subtitle">从前有座山，山里有个庙，庙里有个小和尚在拼命写程序，从前有座山，山里有个庙，庙里有个老和尚拼命debug。</span>
+        
+        <hr class="panel-cover__divider" />
+        <p class="panel-cover__description">选错道路就走不到想去的地方了。</p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary" />
+
+        <div class="navigation-wrapper">
+          <div>
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+              <li class="navigation__item"><a href="/#blog" title="访问博客" class="blog-button">博客</a></li>
+            
+              <li class="navigation__item"><a href="/about">关于</a></li>
+            
+              <li class="navigation__item"><a href="/friendlinks">友链</a></li>
+            
+            </ul>
+          </nav>
+          </div>
+          <div>
+          <nav class="cover-navigation navigation--social">
+  <ul class="navigation">
+
+  <!-- Weibo-->
+  
+  <li class="navigation__item">
+    <a href="http://weibo.com/6177197124/profile?topnav=1&amp;wvr=6&amp;is_all=1" title="我的微博" target="_blank">
+      <i class='social fa fa-weibo'></i>
+      <span class="label">Weibo</span>
+    </a>
+  </li> 
+
+
+  <!-- Github -->
+  
+  <li class="navigation__item">
+    <a href="https://github.com/monniya" title="查看我的GitHub主页" target="_blank">
+      <i class='social fa fa-github'></i>
+      <span class="label">Github</span>
+    </a>
+  </li>
+
+
+<!-- Stack Overflow -->
+        
+
+  <!-- Google Plus -->
+  
+
+<!-- Facebook -->
+
+  
+<!-- Twitter -->
+
+  <li class="navigation__item">
+    <a href="https://twitter.com/onlymonniya" title="上Twitter找我" target="_blank">
+      <i class='social fa fa-twitter'></i>
+      <span class="label">Twitter</span>
+    </a>
+  </li>
+
+  
+
+  <li class="navigation__item">
+    <a href="/atom.xml" title="RSS" target="_blank">
+      <i class='social fa fa-rss'></i>
+      <span class="label">RSS</span>
+    </a>
+  </li>
+
+
+
+  </ul>
+</nav>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="panel-cover--overlay cover-purple"></div>
+  </div> 
+</header>
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner">
+            <article class="post-container post-container--single">
+
+  <header class="post-header">
+    <div class="post-meta">
+      <time datetime="2019-07-23T04:54:36.000Z" class="post-list__meta--date date">2019-07-23</time> &#8226; <span class="post-meta__tags tags">于&nbsp;
+  <a class="tag-link" href="/tags/思维，推导/">思维，推导</a>
+ </span>
+      <span class="page-pv">
+      &nbsp;阅读&nbsp;<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>
+      </span> 
+   
+    </div>
+    <h1 class="post-title">codeforces #574 Div2 D2</h1>
+  </header>
+
+  <section class="post">
+    <h2 id="传送门"><a href="#传送门" class="headerlink" title="传送门"></a><a href="http://codeforces.com/contest/1195/problem/D2" target="_blank" rel="external">传送门</a></h2><h3 id="题目背景"><a href="#题目背景" class="headerlink" title="题目背景"></a>题目背景</h3><blockquote>
+<p> This problem differs from the previous one only in the absence of the constraint on the equal length of all numbers 𝑎1,𝑎2,…,𝑎𝑛a1,a2,…,an.*</p>
+<p>A team of SIS students is going to make a trip on a submarine. Their target is an ancient treasure in a sunken ship lying on the bottom of the Great Rybinsk sea. Unfortunately, the students don’t know the coordinates of the ship, so they asked Meshanya (who is a hereditary mage) to help them. He agreed to help them, but only if they solve his problem. </p>
+<p>Let’s denote a function that alternates digits of two numbers 𝑓(𝑎1𝑎2…𝑎𝑝−1𝑎𝑝,𝑏1𝑏2…𝑏𝑞−1𝑏𝑞)f(a1a2…ap−1ap,b1b2…bq−1bq), where 𝑎1…𝑎𝑝a1…ap and 𝑏1…𝑏𝑞b1…bq are digits of two integers written in the decimal notation without leading zeros.</p>
+<p>In other words, the function 𝑓(𝑥,𝑦)f(x,y) alternately shuffles the digits of the numbers 𝑥x and 𝑦y by writing them from the lowest digits to the older ones, starting with the number 𝑦y. The result of the function is also built from right to left (that is, from the lower digits to the older ones). If the digits of one of the arguments have ended, then the remaining digits of the other argument are written out. Familiarize with examples and formal definitions of the function below.</p>
+<p>For example:<br>𝑓(1111,2222)=12121212    f(1111,2222)=12121212    𝑓(7777,888)=7787878    f(7777,888)=7787878    𝑓(33,44444)=4443434    f(33,44444)=4443434    𝑓(555,6)=5556f(555,6)=5556    𝑓(111,2222)=2121212</p>
+<p>Formally,</p>
+<ul>
+<li>if 𝑝≥𝑞p≥q then 𝑓(𝑎1…𝑎𝑝,𝑏1…𝑏𝑞)=𝑎1𝑎2…𝑎𝑝−𝑞+1𝑏1𝑎𝑝−𝑞+2𝑏2…𝑎𝑝−1𝑏𝑞−1𝑎𝑝𝑏𝑞f(a1…ap,b1…bq)=a1a2…ap−q+1b1ap−q+2b2…ap−1bq−1apbq;</li>
+<li>if 𝑝&lt;𝑞p&lt;q then 𝑓(𝑎1…𝑎𝑝,𝑏1…𝑏𝑞)=𝑏1𝑏2…𝑏𝑞−𝑝𝑎1𝑏𝑞−𝑝+1𝑎2…𝑎𝑝−1𝑏𝑞−1𝑎𝑝𝑏𝑞f(a1…ap,b1…bq)=b1b2…bq−pa1bq−p+1a2…ap−1bq−1apbq.</li>
+</ul>
+<p>Mishanya gives you an array consisting of 𝑛n integers 𝑎𝑖ai, your task is to help students to calculate ∑𝑛𝑖=1∑𝑛𝑗=1𝑓(𝑎𝑖,𝑎𝑗)∑i=1n∑j=1nf(ai,aj) modulo 998244353998244353.</p>
+</blockquote>
+<hr>
+<h3 id="Input"><a href="#Input" class="headerlink" title="Input"></a><strong>Input</strong></h3><blockquote>
+<p>The first line of the input contains a single integer 𝑛n (1≤𝑛≤1000001≤n≤100000) — the number of elements in the array. The second line of the input contains 𝑛n integers 𝑎1,𝑎2,…,𝑎𝑛a1,a2,…,an (1≤𝑎𝑖≤1091≤ai≤109) — the elements of the array.</p>
+</blockquote>
+<hr>
+<h3 id="Output"><a href="#Output" class="headerlink" title="Output"></a><strong>Output</strong></h3><blockquote>
+<p>Print the answer modulo 998244353998244353.</p>
+</blockquote>
+<hr>
+<h3 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a><strong>解题思路</strong></h3><blockquote>
+<p>把数字都组合起来求他们的值。</p>
+<p>我们发现 12 3 就是 222+33</p>
+<p>也就是说，若12 这个2的位置 小于等于3的位数，那就变成 22</p>
+<p>1这个位置大于3的位置，那就变成 200</p>
+<p>所以我们统计一下所有数的位数，枚举每个数字，再枚举所有数的位数。</p>
+<p>根据推导出的结论，</p>
+<p>if(枚举的位数j &gt;= 当前数字的第pos位数字)</p>
+<p>​    ans+=c<em>cnt[j]</em>p10[pos$<em>$2], ans+=c$</em>$cnt[j]$<em>$p10[pos$</em>$2-1];</p>
+<p>else ans+=2$<em>$c$</em>$cnt[j]$*$p10[pos+j];</p>
+</blockquote>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;set&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;queue&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> LL long long</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> close ios::sync_with_stdio(false);</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> FOR(a,b,i) for(int i=a;i&lt;=b;i++)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> FOR2(a,b,i) for(int i=a;i&lt;b;i++)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> debug(x) cout &lt;&lt; <span class="string">"debug:"</span> &lt;&lt; x &lt;&lt; endl;</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> MOD = <span class="number">998244353</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> range = <span class="number">1000005</span>;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">int</span> n,cnt[<span class="number">20</span>];</span><br><span class="line">LL a[range],pw[<span class="number">30</span>],ans;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">cal</span><span class="params">(LL x)</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> len = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span>(x)&#123;</span><br><span class="line">        x/=<span class="number">10</span>;</span><br><span class="line">        len++;</span><br><span class="line">    &#125;</span><br><span class="line">    cnt[len]++;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">init</span><span class="params">()</span></span>&#123;</span><br><span class="line">    pw[<span class="number">1</span>]=<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">2</span>;i &lt; <span class="number">30</span>;i++)</span><br><span class="line">        pw[i] = (pw[i<span class="number">-1</span>]*<span class="number">10</span>)%MOD;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    close;</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; n;</span><br><span class="line">    init();</span><br><span class="line">    FOR(<span class="number">1</span>,n,i)&#123;</span><br><span class="line">        <span class="built_in">cin</span> &gt;&gt; a[i];</span><br><span class="line">        cal(a[i]);</span><br><span class="line"><span class="comment">//        debug(cnt[i]);</span></span><br><span class="line">    &#125;</span><br><span class="line">    FOR(<span class="number">1</span>,n,i)&#123;</span><br><span class="line">        LL x = a[i];</span><br><span class="line">        <span class="keyword">int</span> pos = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span>(x)&#123;</span><br><span class="line">            LL c = x%<span class="number">10</span>;</span><br><span class="line">            x /= <span class="number">10</span>;</span><br><span class="line">            pos++;</span><br><span class="line"><span class="comment">//            debug(pos);</span></span><br><span class="line">            FOR(<span class="number">1</span>,<span class="number">10</span>,j)&#123;</span><br><span class="line">                <span class="keyword">if</span>(j &gt;= pos)&#123;</span><br><span class="line">                    ans = (ans+(c*cnt[j]*pw[pos*<span class="number">2</span>])%MOD)%MOD;</span><br><span class="line">                    ans = (ans+(c*cnt[j]*pw[pos*<span class="number">2</span><span class="number">-1</span>])%MOD)%MOD;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">else</span></span><br><span class="line">                    ans = (ans+(<span class="number">2</span>*c*cnt[j]*pw[pos+j])%MOD)%MOD;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; ans &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<p><img src="http://i2.tiimg.com/597109/265411de14263d92.jpg" alt="嘤嘤嘤"></p>
+
+  </section>
+
+</article>
+
+<section class="read-more">
+           
+    
+        
+        
+               
+            <div class="read-more-item">
+                <span class="read-more-item-dim">更早的文章</span>
+                <h2 class="post-list__post-title post-title"><a href="/2019/07/22/2019CSU-ACM暑假集训热身赛/" title="2019CSU_ACM暑假集训热身赛 B">2019CSU_ACM暑假集训热身赛 B</a></h2>
+                <p class="excerpt">
+                
+                传送门题目描述
+Polycarp is a head of a circus troupe. There are n — an even number — artists in the troupe. It is known whether the i-th artist can perform a
+                &hellip;
+                </p>
+                <div class="post-list__meta"><time datetime="2019-07-22T06:50:21.000Z" class="post-list__meta--date date">2019-07-22</time> &#8226; <span class="post-list__meta--tags tags">于&nbsp;
+  <a class="tag-link" href="/tags/数学，思维/">数学，思维</a>
+</span><a class="btn-border-small" href="/2019/07/22/2019CSU-ACM暑假集训热身赛/">继续阅读</a></div>
+                       
+            </div>
+        
+     
+   
+   
+  
+</section>
+
+  
+
+            <footer class="footer">
+    <span class="footer__copyright">
+        本站点采用 <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>
+    </span>
+    <span class="footer__copyright">
+        基于 <a href="http://hexo.io">Hexo</a> 搭建，感谢 <a href="https://pages.github.com/">GitHub Pages</a> 提供免费的托管服务
+    </span>
+    <span class="footer__copyright">
+        &copy; 2019 - 本站使用 <a href="https://github.com/monniya/hexo-theme-new-vno ">new-vno</a> 主题,
+        由<a href="https://monniya.com ">@Monniya</a> 修改自 <a href="https://github.com/lenbo-ma/hexo-theme-vno" target="_blank">Vno</a>, 原创出自<a href="http://github.com/onevcat/vno" target="_blank">onevcat</a>
+    </span>
+    
+</footer>
+
+
+        </div>
+    </div>
+
+     
+    
+
+
+    <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+    
+  
+    <script type="text/javascript" src="/live2d/script.js"></script>
+    <canvas id="live2dcanvas" width="150" height="300" class="live2d"></canvas>
+    <style>
+      #live2dcanvas {
+        position: fixed;
+        right: 0px;
+        z-index: 999;
+        pointer-events: none;
+        bottom: -60px;
+      }
+    </style>
+    <script>loadlive2d("live2dcanvas" ,"/live2d/assets/koharu/koharu.model.json")</script>
+  
+</body>
+</html>
+<!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/src/love.js"></script>
