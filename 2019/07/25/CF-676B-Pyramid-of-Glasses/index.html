@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    
+    <title>DP [CF-676B]Pyramid of Glasses | 可能是轩轩叭</title>
+    <meta name="renderer" content="webkit">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <meta name="description" content="syxsyx.top">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="DP [CF-676B]Pyramid of Glasses | 可能是轩轩叭">
+    <meta name="twitter:description" content="syxsyx.top">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="DP [CF-676B]Pyramid of Glasses | 可能是轩轩叭">
+    <meta property="og:description" content="syxsyx.top">
+
+    
+    <meta name="author" content="可能是轩轩叭">
+    
+    <link rel="stylesheet" href="/css/vno.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
+
+    
+    <link rel="icon" href="/images/avatar-small.png">
+    
+
+    <meta name="generator" content="hexo"/>
+    
+    <link rel="alternate" type="application/rss+xml" title="可能是轩轩叭" href="/atom.xml">
+    
+
+    <link rel="canonical" href="syx0801.github.io/2019/07/25/CF-676B-Pyramid-of-Glasses/"/>
+
+               
+</head>
+
+<body class="home-template no-js">
+    <script src="//cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
+    <script src="/js/main.js"></script>
+    <span class="mobile btn-mobile-menu">
+        <i class="fa fa-list btn-mobile-menu__icon"></i>
+        <i class="fa fa-angle-up btn-mobile-close__icon hidden"></i>
+    </span>
+
+    
+<header class="panel-cover panel-cover--collapsed" style="background-image: url(/images/background-cover.jpg)">
+  <div class="panel-main">
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        <a href="/" title="前往 可能是轩轩叭 的主页"><img src="/images/avatar.jpg" width="80" alt="可能是轩轩叭 logo" class="panel-cover__logo logo" /></a>
+        <h1 class="panel-cover__title panel-title"><a href="/" title="link to homepage for 可能是轩轩叭">可能是轩轩叭</a></h1>
+        
+        <span class="panel-cover__subtitle panel-subtitle">从前有座山，山里有个庙，庙里有个小和尚在拼命写程序，从前有座山，山里有个庙，庙里有个老和尚拼命debug。</span>
+        
+        <hr class="panel-cover__divider" />
+        <p class="panel-cover__description">选错道路就走不到想去的地方了。</p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary" />
+
+        <div class="navigation-wrapper">
+          <div>
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+              <li class="navigation__item"><a href="/#blog" title="访问博客" class="blog-button">博客</a></li>
+            
+              <li class="navigation__item"><a href="/about">关于</a></li>
+            
+              <li class="navigation__item"><a href="/friendlinks">友链</a></li>
+            
+            </ul>
+          </nav>
+          </div>
+          <div>
+          <nav class="cover-navigation navigation--social">
+  <ul class="navigation">
+
+  <!-- Weibo-->
+  
+  <li class="navigation__item">
+    <a href="http://weibo.com/6177197124/profile?topnav=1&amp;wvr=6&amp;is_all=1" title="我的微博" target="_blank">
+      <i class='social fa fa-weibo'></i>
+      <span class="label">Weibo</span>
+    </a>
+  </li> 
+
+
+  <!-- Github -->
+  
+  <li class="navigation__item">
+    <a href="https://github.com/monniya" title="查看我的GitHub主页" target="_blank">
+      <i class='social fa fa-github'></i>
+      <span class="label">Github</span>
+    </a>
+  </li>
+
+
+<!-- Stack Overflow -->
+        
+
+  <!-- Google Plus -->
+  
+
+<!-- Facebook -->
+
+  
+<!-- Twitter -->
+
+  <li class="navigation__item">
+    <a href="https://twitter.com/onlymonniya" title="上Twitter找我" target="_blank">
+      <i class='social fa fa-twitter'></i>
+      <span class="label">Twitter</span>
+    </a>
+  </li>
+
+  
+
+  <li class="navigation__item">
+    <a href="/atom.xml" title="RSS" target="_blank">
+      <i class='social fa fa-rss'></i>
+      <span class="label">RSS</span>
+    </a>
+  </li>
+
+
+
+  </ul>
+</nav>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="panel-cover--overlay cover-purple"></div>
+  </div> 
+</header>
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner">
+            <article class="post-container post-container--single">
+
+  <header class="post-header">
+    <div class="post-meta">
+      <time datetime="2019-07-25T12:19:51.000Z" class="post-list__meta--date date">2019-07-25</time> &#8226; <span class="post-meta__tags tags">于&nbsp;
+  <a class="tag-link" href="/tags/DP/">DP<span class="tag-count">2</span></a>
+ </span>
+      <span class="page-pv">
+      &nbsp;阅读&nbsp;<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>
+      </span> 
+   
+    </div>
+    <h1 class="post-title">DP [CF-676B]Pyramid of Glasses</h1>
+  </header>
+
+  <section class="post">
+    <h3 id="题目链接"><a href="#题目链接" class="headerlink" title="题目链接"></a><a href="http://codeforces.com/contest/676/problem/B" target="_blank" rel="external">题目链接</a></h3><hr>
+<h3 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h3><blockquote>
+<p>Mary has just graduated from one well-known University and is now attending celebration party. Students like to dream of a beautiful life, so they used champagne glasses to construct a small pyramid. The height of the pyramid is n. The top level consists of only 1 glass, that stands on 2 glasses on the second level (counting from the top), then 3 glasses on the third level and so on.The bottom level consists of n glasses.<br>Vlad has seen in the movies many times how the champagne beautifully flows from top levels to bottom ones, filling all the glasses simultaneously. So he took a bottle and started to pour it in the glass located at the top of the pyramid.<br>Each second, Vlad pours to the top glass the amount of champagne equal to the size of exactly one glass. If the glass is already full, but there is some champagne flowing in it, then it pours over the edge of the glass and is equally distributed over two glasses standing under. If the overflowed glass is at the bottom level, then the champagne pours on the table. For the purpose of this problem we consider that champagne is distributed among pyramid glasses immediately. Vlad is interested in the number of completely full glasses if he stops pouring champagne in t seconds.<br>Pictures below illustrate the pyramid consisting of three levels<br><img src="http://codeforces.com/predownloaded/ba/bd/babd65bb134f49f3bd405a04391a1f3d79b85d99.png" alt="picture1"><br><img src="http://codeforces.com/predownloaded/d2/29/d22903e8a2e3805de7dcdcae275527437bd09255.png" alt="picture2"></p>
+<hr>
+</blockquote>
+<h3 id="题目大意"><a href="#题目大意" class="headerlink" title="题目大意"></a>题目大意</h3><p>有一个n层的酒杯金字塔，每个酒杯容量为1。每秒钟，会有1份酒倒到最上方的酒杯里。当某个酒杯装满时，它会以同样的流量溢出到下一层的两个酒杯之中。求t秒过后有多少装满的酒杯。</p>
+<h3 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h3><p>递推，dp(i, j)表示第i层第j个杯子，从第一层开始向下倒，和数塔一样的题。每个杯子1个时间能倒满，从上开始向下倒时间为t，那每个杯子不满的时候对下面的贡献一定是0，所以当dp[i][j]&gt;=1的时候，计数倒满的杯子并且将溢出的酒向下平分。</p>
+<hr>
+<h4 id="很水的递推"><a href="#很水的递推" class="headerlink" title="很水的递推^_^"></a>很水的递推^_^</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdlib&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;queue&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;deque&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stack&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> LL long long</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">int</span> n,t,ans;</span><br><span class="line"><span class="keyword">double</span> dp[<span class="number">15</span>][<span class="number">15</span>];</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;n,&amp;t);</span><br><span class="line">	dp[<span class="number">1</span>][<span class="number">1</span>] = t;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>;i &lt;= n;i++)</span><br><span class="line">	   <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">1</span>;j &lt;= i;j++)&#123;</span><br><span class="line">	   	  <span class="keyword">if</span>(dp[i][j] &gt;= <span class="number">1.0</span>)&#123;</span><br><span class="line">	   	  	 ans++;</span><br><span class="line">	   	  	 dp[i+<span class="number">1</span>][j] += (dp[i][j]<span class="number">-1</span>)/<span class="number">2</span>;</span><br><span class="line">	   	  	 dp[i+<span class="number">1</span>][j+<span class="number">1</span>] += (dp[i][j]<span class="number">-1</span>)/<span class="number">2</span>;</span><br><span class="line">	   	  &#125;</span><br><span class="line">	   &#125;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%d\n"</span>,ans);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="http://i2.muimg.com/597109/c9a4969074a7023b.jpg" alt="Markdown"></p>
+
+  </section>
+
+</article>
+
+<section class="read-more">
+           
+    
+               
+            <div class="read-more-item">
+                <span class="read-more-item-dim">最近的文章</span>
+                <h2 class="post-list__post-title post-title"><a href="/2019/07/26/codevs-1082线段树3/" title="[codevs]1082线段树3">[codevs]1082线段树3</a></h2>
+                <p class="excerpt">
+                
+                The article has been encrypted, please enter your password to view.
+                &hellip;
+                </p>
+                <div class="post-list__meta"><time datetime="2019-07-26T06:36:56.000Z" class="post-list__meta--date date">2019-07-26</time> &#8226; <span class="post-list__meta--tags tags">于&nbsp;
+  <a class="tag-link" href="/tags/线段树/">线段树<span class="tag-count">2</span></a>
+</span><a class="btn-border-small" href="/2019/07/26/codevs-1082线段树3/">继续阅读</a></div>
+                           
+            </div>
+        
+        
+               
+            <div class="read-more-item">
+                <span class="read-more-item-dim">更早的文章</span>
+                <h2 class="post-list__post-title post-title"><a href="/2019/07/25/数学-P5461赦免战俘/" title="数学 P5461赦免战俘">数学 P5461赦免战俘</a></h2>
+                <p class="excerpt">
+                
+                The article has been encrypted, please enter your password to view.
+                &hellip;
+                </p>
+                <div class="post-list__meta"><time datetime="2019-07-25T02:12:13.000Z" class="post-list__meta--date date">2019-07-25</time> &#8226; <span class="post-list__meta--tags tags">于&nbsp;
+  <a class="tag-link" href="/tags/找规律/">找规律<span class="tag-count">1</span></a>, <a class="tag-link" href="/tags/数学/">数学<span class="tag-count">5</span></a>
+</span><a class="btn-border-small" href="/2019/07/25/数学-P5461赦免战俘/">继续阅读</a></div>
+                       
+            </div>
+        
+     
+   
+   
+  
+</section>
+
+  
+
+            <footer class="footer">
+    <span class="footer__copyright">
+        本站点采用 <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>
+    </span>
+    <span class="footer__copyright">
+        基于 <a href="http://hexo.io">Hexo</a> 搭建，感谢 <a href="https://pages.github.com/">GitHub Pages</a> 提供免费的托管服务
+    </span>
+    <span class="footer__copyright">
+        &copy; 2019 - 本站使用 <a href="https://github.com/monniya/hexo-theme-new-vno ">new-vno</a> 主题,
+        由<a href="https://monniya.com ">@Monniya</a> 修改自 <a href="https://github.com/lenbo-ma/hexo-theme-vno" target="_blank">Vno</a>, 原创出自<a href="http://github.com/onevcat/vno" target="_blank">onevcat</a>
+    </span>
+    
+</footer>
+
+
+        </div>
+    </div>
+
+     
+    
+
+
+    <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+    
+  
+    <script type="text/javascript" src="/live2d/script.js"></script>
+    <canvas id="live2dcanvas" width="150" height="300" class="live2d"></canvas>
+    <style>
+      #live2dcanvas {
+        position: fixed;
+        right: 0px;
+        z-index: 999;
+        pointer-events: none;
+        bottom: -60px;
+      }
+    </style>
+    <script>loadlive2d("live2dcanvas" ,"/live2d/assets/koharu/koharu.model.json")</script>
+  
+</body>
+</html>
+<!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/src/love.js"></script>
