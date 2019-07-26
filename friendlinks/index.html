@@ -39,17 +39,7 @@
 
     <link rel="canonical" href="syx0801.github.io/friendlinks/index.html"/>
 
-     
-    <script>
-    (function(){
-        if('{{ page.password }}'){
-            if (prompt('请输入查看密码') !== '{{ page.password }}'){
-                alert('密码不正确,请询问主编大大');
-                history.back();
-            }
-        }
-    })();
-</script>            
+               
 </head>
 
 <body class="home-template no-js">
@@ -171,6 +161,16 @@
 
 
 
+<script>
+    (function(){
+        if('{{ page.password }}'){
+            if (prompt('请输入查看密码') !== '{{ page.password }}'){
+                alert('密码不正确,请询问主编大大');
+                history.back();
+            }
+        }
+    })();
+</script>  
             <footer class="footer">
     <span class="footer__copyright">
         本站点采用 <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>
