@@ -12,15 +12,15 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    <meta name="description" content="syxsyx.top">
+    <meta name="description" content="文章访问需要密码">
 
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="数学 P5461赦免战俘 | 可能是轩轩叭">
-    <meta name="twitter:description" content="syxsyx.top">
+    <meta name="twitter:description" content="文章访问需要密码">
 
     <meta property="og:type" content="article">
     <meta property="og:title" content="数学 P5461赦免战俘 | 可能是轩轩叭">
-    <meta property="og:description" content="syxsyx.top">
+    <meta property="og:description" content="文章访问需要密码">
 
     
     <meta name="author" content="可能是轩轩叭">
@@ -39,7 +39,17 @@
 
     <link rel="canonical" href="syx0801.github.io/2019/07/25/数学-P5461赦免战俘/"/>
 
-                 
+     
+    <script>
+    (function(){
+        if('{{ page.password }}'){
+            if (prompt('请输入查看密码') !== '{{ page.password }}'){
+                alert('密码不正确,请询问主编大大');
+                history.back();
+            }
+        }
+    })();
+</script>            
 </head>
 
 <body class="home-template no-js">
