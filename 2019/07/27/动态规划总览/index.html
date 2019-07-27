@@ -4,7 +4,7 @@
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     
-    <title>可能是轩轩叭 | 从前有座山，山里有个庙，庙里有个小和尚在拼命写程序，从前有座山，山里有个庙，庙里有个老和尚拼命debug。</title>
+    <title>动态规划总览 | 可能是轩轩叭</title>
     <meta name="renderer" content="webkit">
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
@@ -15,11 +15,11 @@
     <meta name="description" content="syxsyx.top">
 
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="可能是轩轩叭 | 从前有座山，山里有个庙，庙里有个小和尚在拼命写程序，从前有座山，山里有个庙，庙里有个老和尚拼命debug。">
+    <meta name="twitter:title" content="动态规划总览 | 可能是轩轩叭">
     <meta name="twitter:description" content="syxsyx.top">
 
     <meta property="og:type" content="article">
-    <meta property="og:title" content="可能是轩轩叭 | 从前有座山，山里有个庙，庙里有个小和尚在拼命写程序，从前有座山，山里有个庙，庙里有个老和尚拼命debug。">
+    <meta property="og:title" content="动态规划总览 | 可能是轩轩叭">
     <meta property="og:description" content="syxsyx.top">
 
     
@@ -37,7 +37,7 @@
     <link rel="alternate" type="application/rss+xml" title="可能是轩轩叭" href="/atom.xml">
     
 
-    <link rel="canonical" href="syx0801.github.io"/>
+    <link rel="canonical" href="syx0801.github.io/2019/07/27/动态规划总览/"/>
 
                
 </head>
@@ -147,48 +147,67 @@
 
     <div class="content-wrapper">
         <div class="content-wrapper__inner">
-            <div class="main-post-list">
-    
-  <ol class="post-list">
-  
-    
-    <li>
-      <h2 class="post-list__post-title post-title"><a href="/2017/06/13/codevs-1851-越狱/" title="link to post.title">[codevs]1851 越狱</a></h2>
-      <p class="excerpt">
-    
-      The article has been encrypted, please enter your password to view.
-    &hellip;
-      </p>
-      <div class="post-list__meta"><time datetime="2017-06-13T00:21:08.000Z" class="post-list__meta--date date">2017-06-13</time> &#8226; <span class="post-list__meta--tags tags">于&nbsp;
-  <a class="tag-link" href="/tags/快速幂/">快速幂<span class="tag-count">1</span></a>, <a class="tag-link" href="/tags/数学/">数学<span class="tag-count">5</span></a>
-</span><a class="btn-border-small" href="/2017/06/13/codevs-1851-越狱/">继续阅读</a></div>
-      <hr class="post-list__divider" />
-    </li>
-  
-    
-  </ol>
+            <article class="post-container post-container--single">
 
+  <header class="post-header">
+    <div class="post-meta">
+      <time datetime="2019-07-27T02:09:55.000Z" class="post-list__meta--date date">2019-07-27</time> &#8226; <span class="post-meta__tags tags">于&nbsp;
+  <a class="tag-link" href="/tags/DP/">DP<span class="tag-count">4</span></a>, <a class="tag-link" href="/tags/动态规划/">动态规划<span class="tag-count">2</span></a>
+ </span>
+      <span class="page-pv">
+      &nbsp;阅读&nbsp;<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>
+      </span> 
+   
+    </div>
+    <h1 class="post-title">动态规划总览</h1>
+  </header>
 
- <script type="text/x-mathjax-config">
-    MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"], linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) },
-        tex2jax: { inlineMath: [ ["$", "$"], ["\\(","\\)"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno",skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']},
-        TeX: {  noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } }, Macros: { href: "{}" } },
-        messageStyle: "none"
-    }); 
-    
-</script>
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax(), i;
-        for(i=0; i < all.length; i += 1) {
-            all[i].SourceElement().parentNode.className += ' has-jax';
-        }
-    });
-</script>
-<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-</script>
+  <section class="post">
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+<div id="hbe-security">
+  <div class="hbe-input-container">
+  <input type="password" class="hbe-form-control" id="pass" placeholder="输个密码叭，密码对了就让你看。" />
+    <label for="pass">输个密码叭，密码对了就让你看。</label>
+    <div class="bottom-line"></div>
+  </div>
 </div>
+<div id="decryptionError" style="display: none;">Incorrect Password!</div>
+<div id="noContentError" style="display: none;">No content to display!</div>
+<div id="encrypt-blog" style="display:none">
+U2FsdGVkX1/TUa+ixojRol+oMdOnIRSvb8nGKUECQWknLKVd2UUsStVYj/acqkB1V7iXYwe+rMhFNh843h59fr13eaWv6+XEWxrsU9sNpNvZ2uDSWlJU4LN7LgjBzxS477AM9r4MBHE321be6EuGeEExT10HQ/2nD4qgqVY+dFV8aZh5YCbD3vjB2m1SjZf1z2nRmus4P99qETShSLSCFuOGOpB+Aag8RTokga9hut4zKIwSWflzOQ9baKxvnQ37vOahsdFyKvyZM7OKTWxKLzrqPN0VYhfQZ0RHwmj24+ARs5K++y2JJnVz+vK3jhhZmeRRtYw3RuP/tcunLGL3BybPOdz2ze6/g8C3405afphWqwkotR01ach1/UaMPXtQdRgGoYK8jMiC7RMb7PMJ+PNovQHoAU17uR159KRNDD48I4SS99cyWYDBQ384prEnkQP9iwneTBBffdTK76CAUE/w3FTnAGLr6cE2QJkEvxoytJWWv/LeUVWgQFlt18hQ0+BT8U9t4dYX7cN7Cp3kmg59zwVSMsZw6e7aFIV2VWoa11Ts/xWFom04Jjy1/p7zI8hC1ft8rGbq1l+pRmfvm/XrvPd7yc/uuNiK/HRlF+kZLuDP2VrWmmBNxZcaEDQSRzjewBgGm+MLnR80uw+hIA3f3a/X1zy0HuMbSO9aMjyl+Br+9aqJvl73qCFKDEPrsg8gnkdi0DlUoMbMa+oepeozdgajNOIbjmfZFbF9rFrvobrdrSqgdkwltvvx8n+QT9eiaTzwnU6J1puJ+H+/zFJi8f8sIxnoF/omsMyDPJLinAejgkfNPNPlby1F+pwGTfNGvSZd/tK47T5bu8nYGJj5a24xTl6DJsRY5ncyYCMUtMqKpF5dxcW9LzT/F7QXW5zAXhx/HpcX6Btl24EQLYi6mp0+WHMI6sTJhb1b1SKVjrh2SqaHN79asLDwypwsJ0VC+utY8UHmjBsF9oTJJAHfF8gvuuMMiIypWtDfBpq+Ix0R+KeJ/Ff6YZkAydngwd/ZORZydbwIoM6/jCm2HgPcchfKhn0avEZx2Tndy4fhCpipHP2/iu3K5ebo761s
+</div>
+<script src="/lib/crypto-js.js"></script><script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">
+  </section>
 
+</article>
+
+<section class="read-more">
+           
+    
+        
+        
+               
+            <div class="read-more-item">
+                <span class="read-more-item-dim">更早的文章</span>
+                <h2 class="post-list__post-title post-title"><a href="/2019/07/27/DP 装箱问题/" title="DP 装箱问题">DP 装箱问题</a></h2>
+                <p class="excerpt">
+                
+                The article has been encrypted, please enter your password to view.
+                &hellip;
+                </p>
+                <div class="post-list__meta"><time datetime="2019-07-27T01:57:25.000Z" class="post-list__meta--date date">2019-07-27</time> &#8226; <span class="post-list__meta--tags tags">于&nbsp;
+  <a class="tag-link" href="/tags/DP/">DP<span class="tag-count">4</span></a>, <a class="tag-link" href="/tags/动态规划/">动态规划<span class="tag-count">2</span></a>
+</span><a class="btn-border-small" href="/2019/07/27/DP 装箱问题/">继续阅读</a></div>
+                       
+            </div>
+        
+     
+   
+   
+  
+</section>
+
+  
 
             <footer class="footer">
     <span class="footer__copyright">
